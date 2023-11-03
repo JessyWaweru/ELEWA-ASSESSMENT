@@ -1,6 +1,29 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Header from './Header'
+import ImageSlider from './ImageSlider'
+
+
 const About :React.FC=()=>{
+    const images=[
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679985792/elewa-group-website/elewa-team-members/lemmy_oosngt.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656820/elewa-group-website/elewa-team-members/jente-elewa_wbqyyi.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656822/elewa-group-website/elewa-team-members/ken-elewa_ydwzop.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656822/elewa-group-website/elewa-team-members/peter-elewa_zuzovx.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679660055/elewa-group-website/elewa-team-members/noella-elewa_g6tquq.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656821/elewa-group-website/elewa-team-members/ian-elewa_bejey9.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656821/elewa-group-website/elewa-team-members/jane-elewa_yyybka.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/c_scale,q_90,w_600/v1679657743/elewa-group-website/elewa-team-members/shawn-elewa_tt3iit.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/c_scale,q_90,w_800/v1679984133/elewa-group-website/elewa-team-members/joy_gvbweu.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656821/elewa-group-website/elewa-team-members/reagan-elewa_bn8xkl.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/c_scale,q_90,w_600/v1679666201/elewa-group-website/elewa-team-members/chesa-elewa_soeb8f.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679665800/elewa-group-website/elewa-team-members/jeff-elewa_hdupp7.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656822/elewa-group-website/elewa-team-members/zip-elewa_jksbfg.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/c_scale,h_1000/v1682586211/IMG_9755_vfprhm.jpg',
+        'https://res.cloudinary.com/dyl3rncv3/image/upload/v1679656820/elewa-group-website/elewa-team-members/frank-elewa_kihn9e.jpg',
+       
+    ]
+
+    
 return(
     < >
       <div className="bg-cover bg-center h-screen mb-20 "
@@ -43,11 +66,18 @@ return(
         <p>Impact</p>
         <p>Open Data</p>
       </div>
-      <div className='mr-12 ml-12 flex space-x-8 text-black text-[21px]'>
+      <div className='mr-12 ml-12 mb-80 flex space-x-8 text-black text-[21px]'>
         <p>We go beyond a simple patch-up but<br/> develop lasting solutions through <br/>holistic design.</p>
         <p>Impact as a direct, or indirect, result.<br/> All our respective organizations have <br/>underlying theories of change.</p>
         <p>Sharing is caring. We share what we<br/> learn. As proof, we've open-sourced all<br/> our internal projects.</p>
       </div>
+      <div>
+      <p>Team/Management</p>
+      </div>
+     <div>
+     <ImageSlider images={images}/>
+     </div>
+      
     </>
 )
 }
